@@ -143,7 +143,7 @@ st.plotly_chart(expense_fig, use_container_width=True)
 # forecasting section
 #---------------
 st.subheader("🔮 Forecasting profit ")
-forecast_periods = st.slider("Select number of days (months) to forecast",30 ,365,90)
+forecast_periods = st.slider("Select number of days (months) to forecast",30 ,90)
 
 
 # Prepare data for Prophet
@@ -206,6 +206,7 @@ st.plotly_chart(feature_fig, use_container_width=True)
 st.markdown("---")
 st.markdown("developed as a minor project to analyze and forecost profit and loss of any sales data of company .")
                 
+
 
 
 
