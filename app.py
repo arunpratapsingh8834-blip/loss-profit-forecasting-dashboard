@@ -152,6 +152,10 @@ model = Prophet()
 model.fit(prophet_df)
 future = model.make_future_dataframe(periods=forecast_periods)
 forecast = model.predict(future)
+forecast = forecast.rename(column = {
+    "ds":"date",
+    "yhat":"predicted_profit"
+})
 forecasr_fig = px.line(forecast, x='date', y='profit', title='Profit Forecast')
 st.plotly_chart(forecasr_fig, use_container_width=True)
 #---------------
@@ -198,6 +202,7 @@ st.plotly_chart(feature_fig, use_container_width=True)
 st.markdown("---")
 st.markdown("developed as a minor project to analyze and forecost profit and loss of any sales data of company .")
                 
+
 
 
 
