@@ -26,7 +26,7 @@ st.markdown("upload your financial data to analyze past performance and forecast
 # ------------------------------------------
 # File Upload
 # ------------------------------------------
-uploaded_file = st.file_uploader("Upload your financial data (CSV format)", type=["csv"])
+uploaded_file = st.file_uploader("Upload your financial data (CSV format) required format : date , cost ,marketing_spend(expenses),operating_expenses ,revenue", type=["csv"])
 if uploaded_file is None:
     st.warning("please uploade your csv file to  continue")
     st.stop()
@@ -206,6 +206,7 @@ st.plotly_chart(feature_fig, use_container_width=True)
 st.markdown("---")
 st.markdown("developed as a minor project to analyze and forecost profit and loss of any sales data of company .")
                 
+
 
 
 
